@@ -9,10 +9,11 @@ import PropTypes from 'prop-types'
 import myPict from 'additionals/Tabs/pictureForTab.png'
 
 export function Welcome(props){
-   return ((props.tab === activeTabs.FIRST && <Text>my first text</Text>) ||
-           (props.tab === activeTabs.SECOND && <Text>my second text</Text>) ||
-           (props.tab === activeTabs.THIRD && <Img src={myPict} alt="Picture" />)
-          )
+   return (<div>
+            {props.tab === activeTabs.FIRST && <Text>my first text</Text>}
+            {props.tab === activeTabs.SECOND && <Text>my second text</Text>}
+            {props.tab === activeTabs.THIRD && <Img src={myPict} alt="Picture" />}
+          </div>)
 }
 
 Welcome.propTypes = {

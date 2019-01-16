@@ -20,7 +20,6 @@ class App extends Component {
 
   render() {
     const {activeTab} = this.state
-    const {text} = this.state
     return(
       <Wrapper>
         {textForTab.map(({ value, title }) =>
@@ -31,9 +30,7 @@ class App extends Component {
            title={title}
           />
         )}
-        <div>
         <Welcome tab={activeTab} />
-        </div>
       </Wrapper>
     )
   }
