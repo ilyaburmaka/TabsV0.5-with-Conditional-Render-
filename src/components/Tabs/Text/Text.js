@@ -8,14 +8,17 @@ import PropTypes from 'prop-types'
 //import image
 import myPict from 'additionals/Tabs/pictureForTab.png'
 
-export function Welcome(props){
-   return (<div>
+
+const Welcome = (props) =>  {
+  return( <div>
             {props.tab === activeTabs.FIRST && <Text>my first text</Text>}
             {props.tab === activeTabs.SECOND && <Text>my second text</Text>}
             {props.tab === activeTabs.THIRD && <Img src={myPict} alt="Picture" />}
-          </div>)
-}
+          </div>
+)}
 
 Welcome.propTypes = {
   tab:PropTypes.string.isRequired
 }
+
+export default Welcome
