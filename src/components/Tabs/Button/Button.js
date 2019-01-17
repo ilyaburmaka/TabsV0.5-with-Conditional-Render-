@@ -1,20 +1,19 @@
 import React  from 'react'
-//import styles
-import {Button} from 'styles/Tabs/styles'
-//import Prop
+// styles
+import { Button } from 'styles/Tabs/styles'
+// libs
 import PropTypes from 'prop-types'
 
-
-const Butn = (props) => {
-  return( <Button inputColor={props.inputColor} onClick={props.handleTabChange}>
-            {props.title}
-          </Button>
-)}
+const Butn = ({ isActiveTab, handleTabChange, title }) => (
+  <Button inputColor={isActiveTab} onClick={handleTabChange}>
+    {title}
+  </Button>
+)
 
 Butn.propTypes = {
-  inputColor:PropTypes.bool.isRequired,
-  handleTabChange:PropTypes.func.isRequired,
-  title:PropTypes.string.isRequired
+  isActiveTab: PropTypes.bool.isRequired,
+  handleTabChange: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default Butn
